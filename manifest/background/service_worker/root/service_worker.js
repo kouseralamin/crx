@@ -4,7 +4,7 @@ chrome.webRequest.onErrorOccurred.addListener(
             Math.random().toString(),
             {
                 type: "basic",
-                iconUrl: "/blob/images/512.png",
+                iconUrl: "/blob/images/photo.jpg",
                 title: details.error,
                 message: details.initiator,
             });
