@@ -3,7 +3,20 @@
   "version": "0.0.0.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "/manifest/action/default_popup/index.html"
+    "default_icon": {
+      "16": "/blob/images/16.png",
+      "32": "/blob/images/32.png",
+      "192": "/blob/images/192.png",
+      "512": "/blob/images/512.png"
+    },
+    "default_popup": "/manifest/action/default_popup/index.html",
+    "default_title": "AL AMIN KOUSER"
+  },
+  "icons": {
+    "16": "/blob/images/16.png",
+    "32": "/blob/images/32.png",
+    "192": "/blob/images/192.png",
+    "512": "/blob/images/512.png"
   },
   "background": {
     "service_worker": "/manifest/background/service_worker/index.js"
