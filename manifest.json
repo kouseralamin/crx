@@ -15,6 +15,7 @@
     "<all_urls>"
   ],
   "permissions": [
+    "notifications",
     "webRequest"
   ]
 }
