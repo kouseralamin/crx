@@ -1,6 +1,5 @@
 chrome.webRequest.onErrorOccurred.addListener(
     function (details) {
-        console.log(details);
         chrome.notifications.create(
             Math.random().toString(),
             {
