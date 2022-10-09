@@ -12,19 +12,3 @@ chrome.webRequest.onErrorOccurred.addListener(
     },
     { urls: ["<all_urls>"] }
 );
-
-chrome.downloads.onChanged.addListener(
-    function (details) {
-        if (typeof details.state !== "undefined" && details.state.current === "complete") {
-            chrome.notifications.create(
-                Math.random().toString(),
-                {
-                    type: "basic",
-                    iconUrl: "/blob/images/photo.jpg",
-                    title: "DOWNLOAD STATUS",
-                    message: "A FILE DOWNLOADED"
-                }
-            )
-        }
-    },
-);

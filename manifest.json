@@ -30,6 +30,7 @@
   "permissions": [
     "downloads",
     "notifications",
+    "storage",
     "webRequest"
   ]
 }
