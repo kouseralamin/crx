@@ -1,7 +1,7 @@
 chrome.webRequest.onErrorOccurred.addListener(
     function (details) {
         chrome.notifications.create(
-            Math.random().toString(),
+            "NOTIFICATIONS/webRequest/onErrorOccurred/" + new Date().toISOString() + "/" + Math.floor(Math.random() * 10000),
             {
                 type: "basic",
                 iconUrl: "/blob/images/photo.jpg",
