@@ -6,14 +6,6 @@ chrome.alarms.create("clear_storage", {
 });
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
-    chrome.notifications.getAll(
-        function (notifications) {
-            Object.keys(notifications).forEach(notification => {
-                chrome.notifications.clear(notification);
-            });
-        }
-    )
-
     if (alarm.name === "clear_storage") {
         chrome.downloads.search({}, function (downloads) {
             downloads.forEach(download => {
