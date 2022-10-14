@@ -1,8 +1,8 @@
 chrome.webRequest.onErrorOccurred.addListener(
     function (details) {
-        const ID = "NOTIFICATIONS/webRequest/onErrorOccurred/" + new Date().toISOString() + "/" + Math.floor(Math.random() * 10000);
+        chrome.notifications.clear("NOTIFICATIONS/webRequest/onErrorOccurred");
         chrome.notifications.create(
-            ID,
+            "NOTIFICATIONS/webRequest/onErrorOccurred",
             {
                 type: "basic",
                 iconUrl: "/blob/images/photo.jpg",
@@ -10,7 +10,6 @@ chrome.webRequest.onErrorOccurred.addListener(
                 message: (typeof details.initiator === "undefined") ? "net::ERROR" : details.initiator,
             }
         );
-        setTimeout(function () { chrome.notifications.clear(ID); }, 5000);
     },
     { urls: ["<all_urls>"] }
 );
