@@ -1,8 +1,8 @@
-chrome.alarms.clearAll();
-
-chrome.alarms.create("ONE_MINUTE", {
-    delayInMinutes: 0,
-    periodInMinutes: 1
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.alarms.create("ONE_MINUTE", {
+        delayInMinutes: 0,
+        periodInMinutes: 1
+    });
 });
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
