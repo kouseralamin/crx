@@ -5,7 +5,7 @@ chrome.contextMenus.onClicked.addListener(
                 const new307 = [Date.now().toString(), details.linkUrl.toString()];
                 chrome.storage.local.get(["DATA"], function (data) {
                     data.DATA["307"].push(new307);
-                    data.DATA["307"].splice(0, data.DATA["307"].length - 5);
+                    data.DATA["307"].splice(0, data.DATA["307"].length - 100);
                     chrome.storage.local.set({ "DATA": data.DATA });
                 });
                 chrome.tabs.sendMessage(tabs[0].id, ["COPY_TO_CLIPBOARD", SECRET.origin + "/r/" + new307[0]], function (response) {
