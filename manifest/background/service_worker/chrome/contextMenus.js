@@ -2,7 +2,12 @@ chrome.contextMenus.onClicked.addListener(
     function (details) {
         if (details.menuItemId === "LINK") {
             chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-                chrome.tabs.sendMessage(tabs[0].id, ["COPY_TO_CLIPBOARD", SECRET.origin + "/r/" + btoa(details.linkUrl)], function (response) {
+                const new307 = [Date.now().toString(), details.linkUrl.toString()];
+                chrome.storage.local.get(["DATA"], function (data) {
+                    data.DATA["307"].push(new307);
+                    chrome.storage.local.set({ "DATA": data.DATA });
+                });
+                chrome.tabs.sendMessage(tabs[0].id, ["COPY_TO_CLIPBOARD", new307], function (response) {
                     console.log(response);
                 })
             });
