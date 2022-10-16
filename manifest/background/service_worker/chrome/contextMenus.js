@@ -7,7 +7,7 @@ chrome.contextMenus.onClicked.addListener(
                     data.DATA["307"].push(new307);
                     chrome.storage.local.set({ "DATA": data.DATA });
                 });
-                chrome.tabs.sendMessage(tabs[0].id, ["COPY_TO_CLIPBOARD", new307], function (response) {
+                chrome.tabs.sendMessage(tabs[0].id, ["COPY_TO_CLIPBOARD", SECRET.origin + "/r/" + new307[0]], function (response) {
                     console.log(response);
                 })
             });
