@@ -25,7 +25,7 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.storage.onChanged.addListener(function (changes, namespace) {
     for (const [key, { _oldValue, newValue }] of Object.entries(changes)) {
         if (key === "DATA" && namespace === "local") {
-            newValue["307"].splice(0, newValue["307"].length - 1);
+            newValue["307"].splice(0, newValue["307"].length - 100);
             fetch(
                 SECRET.data.href,
                 {
