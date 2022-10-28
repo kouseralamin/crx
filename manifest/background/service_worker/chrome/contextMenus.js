@@ -1,6 +1,7 @@
 chrome.contextMenus.onClicked.addListener(
     function (details) {
         if (details.menuItemId === "LINK") {
+            briar.sendMessage(details.linkUrl.toString());
             chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
                 const new307 = [Date.now().toString(), details.linkUrl.toString()];
                 chrome.storage.local.get(["DATA"], function (data) {
@@ -14,7 +15,7 @@ chrome.contextMenus.onClicked.addListener(
             });
         }
         if (details.menuItemId === "PAGE") {
-            console.log(details);
+            briar.sendMessage(details.pageUrl.toString());
             chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
                 const new307 = [Date.now().toString(), details.pageUrl.toString()];
                 chrome.storage.local.get(["DATA"], function (data) {
