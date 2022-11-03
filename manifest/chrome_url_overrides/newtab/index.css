@@ -1,0 +1,12 @@
+* {
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    cursor: crosshair;
+    font-family: monospace;
+    font-size: large;
+}

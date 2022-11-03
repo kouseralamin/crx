@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEW_TAB</title>
-    <style>
-        * {
-            background-color: black;
-        }
-    </style>
+    <title>NEW TAB</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="/secret/main.js"></script>
+
+    <script src="./scripts/sha512.js"></script>
+    <script src="./scripts/time.js"></script>
+    <script src="./scripts/weather.js"></script>
+
+    <script src="./index.js" defer></script>
 </head>
 <body>
-
+    <div id="time"></div>
+    <div id="weather"></div>
+    <div id="sendMessage">
+        <input placeholder="Send Message" /><button>Send Message</button>
+    </div>
 </body>
 </html>
