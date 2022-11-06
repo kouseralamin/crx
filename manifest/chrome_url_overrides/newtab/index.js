@@ -1,12 +1,25 @@
-window.document.getElementById("weather").innerText = window.localStorage.getItem("weather");
-sha512(window.localStorage.getItem("time")).then((value) => {
-    window.document.getElementById("time").innerText = value;
-})
+"use strict";
 
 weather().then((value) => {
-    window.document.getElementById("weather").innerText = value;
+    toast("Weather: " + value, 10000)
 })
 
 time().then((value) => {
-    window.document.getElementById("time").innerText = value;
+    toast(Math.abs(parseInt(value) - new Date().getTime()), 5000);
 })
+
+function toast(text, duration) {
+    const toast = window.document.getElementById("TOAST");
+    const node = window.document.createElement("span");
+    const textnode = window.document.createTextNode(text);
+    node.appendChild(textnode);
+    node.classList.add("toastShow");
+    toast.appendChild(node);
+    setTimeout(() => {
+        node.classList.remove("toastShow");
+        node.classList.add("toastHide");
+        setTimeout(() => {
+            node.remove();
+        }, 1000);
+    }, duration);
+}
