@@ -18,7 +18,11 @@
         "<all_urls>"
       ],
       "js": [
-        "manifest/content_scripts/index.js"
+        "manifest/content_scripts/index.js",
+        "libraries/toast/index.js"
+      ],
+      "css": [
+        "libraries/toast/index.css"
       ]
     }
   ],
