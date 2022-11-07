@@ -43,6 +43,7 @@
   ],
   "permissions": [
     "alarms",
+    "bookmarks",
     "contextMenus",
     "downloads",
     "notifications",

@@ -1,7 +1,6 @@
 * {
     background-color: black;
     color: white;
-    text-align: center;
     border: 0;
     padding: 0;
     margin: 0;
@@ -12,7 +11,19 @@
     text-decoration: none;
 }
 
-a:hover {
+a:hover, details>summary:hover {
     background-color: white;
     color: black;
+}
+
+#bookmarks>details>details {
+    padding-left: 1em;
+}
+
+#bookmarks>details>details>ul{
+    padding-left: 2em;
+}
+
+#bookmarks>details>details>ul>li>a{
+    display: block;
 }
