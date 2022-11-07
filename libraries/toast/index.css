@@ -8,12 +8,14 @@
 
 #TOAST>span {
     display: table;
-    margin: 0 auto 5px;
+    margin: 0 auto 10px;
     white-space: pre-wrap;
-    background-color: rgba(255, 255, 255, 0.25);
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 0.5em;
     border-radius: 10px;
     backdrop-filter: blur(10px);
+    color: white;
+    box-shadow: 0px 0px 2px 2px #ffffff;
 }
 
 #TOAST>span.toastShow {
