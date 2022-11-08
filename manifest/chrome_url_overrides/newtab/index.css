@@ -11,7 +11,12 @@
     text-decoration: none;
 }
 
-a:hover, details>summary:hover {
+*::-webkit-scrollbar {
+    display: none;
+}
+
+a:hover,
+details>summary:hover {
     background-color: white;
     color: black;
 }
@@ -20,15 +25,36 @@ a:hover, details>summary:hover {
     padding-left: 1em;
 }
 
-#bookmarks>details>details>ul{
+#bookmarks>details>details>ul {
     padding-left: 2em;
 }
 
-#bookmarks>details>details>ul>li>a{
+#bookmarks>details>details>ul>li>a {
     display: block;
 }
 
-#topSites>details>ul>li>a{
+#topSites>details>ul>li>a {
     display: block;
+    text-align: center;
+}
+
+#history>input {
+    text-align: center;
+    width: 100vw;
+}
+
+#history>input:hover {
+    background-color: white;
+    color: black;
+}
+
+#history>input:focus {
+    background-color: black;
+    color: white;
+}
+
+#history>div>a {
+    display: block;
+    white-space: pre-wrap;
     text-align: center;
 }
