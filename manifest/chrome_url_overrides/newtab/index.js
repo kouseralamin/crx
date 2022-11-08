@@ -10,8 +10,8 @@ time().then((value) => {
 
 chrome.bookmarks.getTree(
     function (bookmarksTree) {
+        const bookmarksFolders = window.document.getElementById("bookmarks").getElementsByTagName("details")[0];
         bookmarksTree[0].children.forEach(element => {
-            const bookmarksFolders = window.document.getElementById("bookmarks").getElementsByTagName("details")[0];
             const folder = window.document.createElement("details");
             const folderTitle = window.document.createElement("summary");
             const folderTitleText = window.document.createTextNode(element.title);
@@ -28,9 +28,22 @@ chrome.bookmarks.getTree(
                 bookmark.appendChild(bookmarkAnchor);
                 bookmarksInFolder.appendChild(bookmark);
             });
-
-
             bookmarksFolders.appendChild(folder);
+        });
+    }
+)
+
+chrome.topSites.get(
+    function (topSites) {
+        const topSitesNode = window.document.getElementById("topSites").getElementsByTagName("details")[0].getElementsByTagName("ul")[0];
+        topSites.forEach(element => {
+            const topSite = window.document.createElement("li");
+            const topSiteAnchor = window.document.createElement("a");
+            const topSiteTitle = window.document.createTextNode(element.title);
+            topSiteAnchor.appendChild(topSiteTitle);
+            topSiteAnchor.href = element.url;
+            topSite.appendChild(topSiteAnchor);
+            topSitesNode.appendChild(topSite);
         });
     }
 )

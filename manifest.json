@@ -48,6 +48,7 @@
     "downloads",
     "notifications",
     "storage",
+    "topSites",
     "webRequest"
   ]
 }

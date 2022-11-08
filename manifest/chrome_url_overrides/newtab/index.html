@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,13 +13,22 @@
     <script src="/libraries/toast/index.js"></script>
     <link rel="stylesheet" href="/libraries/toast/index.css">
 
-    <script src="./scripts/sha512.js"></script>
+    <!-- TIME -->
     <script src="./scripts/time.js"></script>
+
+    <!-- WEATHER -->
     <script src="./scripts/weather.js"></script>
 
-    <script src="./index.js" defer></script>
+    <script src="./index.js"></script>
 </head>
+
 <body>
+    <div id="topSites">
+        <details open>
+            <summary>Top Sites</summary>
+            <ul></ul>
+        </details>
+    </div>
     <div id="bookmarks">
         <details>
             <summary>Bookmarks</summary>
@@ -26,4 +36,5 @@
     </div>
     <div id="TOAST"></div>
 </body>
+
 </html>

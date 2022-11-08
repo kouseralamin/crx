@@ -27,3 +27,8 @@ a:hover, details>summary:hover {
 #bookmarks>details>details>ul>li>a{
     display: block;
 }
+
+#topSites>details>ul>li>a{
+    display: block;
+    text-align: center;
+}
