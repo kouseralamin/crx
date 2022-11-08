@@ -1,0 +1,16 @@
+* {
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    cursor: crosshair;
+    font-family: monospace;
+    font-size: large;
+    text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
