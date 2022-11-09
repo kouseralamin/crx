@@ -15,11 +15,17 @@
     display: none;
 }
 
-body>div {
+#top {
+    position: sticky;
+    top: 0px;
+    text-align: center;
+}
+
+#events>div {
     padding: 10px;
 }
 
-body>div>div {
+#events>div>div {
     word-wrap: break-word;
     padding: 2px;
 }
